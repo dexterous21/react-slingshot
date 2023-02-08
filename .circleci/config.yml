@@ -14,7 +14,8 @@ jobs:
       - run:
           name: "Build Job"
           command: |
-            echo "Build Job" 
+            echo "Build Job"
+            npm i 
             npm run lint
   test:
     docker:
@@ -25,6 +26,7 @@ jobs:
           name: "Test Job"
           command: |
             echo "Test Job" 
+            npm i
             npm run test
 
   analyse:
